@@ -1,0 +1,55 @@
+/*覆盖vp-doc的一些样式*/
+
+// :root {
+//   --vp-sidebar-width: 320px;
+// }
+
+@mixin sidebar() {
+  width: var(--vp-sidebar-width) !important;
+  padding-left: 48px !important;
+  padding-right: 24px !important;
+}
+@mixin content() {
+  padding-left: var(--vp-sidebar-width) !important;
+  padding-right: 24px !important;
+}
+
+.VPSidebar  {
+  @include sidebar()
+}
+
+.VPContent.has-sidebar  {
+  @include content();
+  .VPDoc {
+    >.container>.content {
+      padding: 0;
+      .content-container {
+        max-width: none !important;
+      }
+    }
+  }
+}
+
+.VPNavBar.has-sidebar  {
+  >.wrapper>.container {
+    >.title {
+      @include sidebar();
+    }
+    >.content {
+      @include content();
+      padding-right: 48px !important;
+    }
+  }
+}
+
+.VPHero {
+  >.container>.main {
+    >.text {
+      font-size: 28px;
+    }
+    >.tagline {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "hash": "73bd29de",
+  "configHash": "59be005f",
+  "lockfileHash": "d6a54b7f",
+  "browserHash": "b618a81a",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "0e3dab99",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "31dc359c",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/vitepress/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "6760962c",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "e569d105",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "bbf5da4b",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "5fa3f1a4",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "eeb22550",
+      "needsInterop": false
+    },
+    "element-plus/es/locale/lang/zh-cn": {
+      "src": "../../../../node_modules/element-plus/es/locale/lang/zh-cn.mjs",
+      "file": "element-plus_es_locale_lang_zh-cn.js",
+      "fileHash": "fe453652",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "1e5ae075",
+      "needsInterop": false
+    },
+    "turing-ui-vue3": {
+      "src": "../../../../node_modules/turing-ui-vue3/lib/turing-ui-vue3.umd.cjs",
+      "file": "turing-ui-vue3.js",
+      "fileHash": "69acf12e",
+      "needsInterop": true
+    },
+    "@vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "22389ad0",
+      "needsInterop": false
+    },
+    "turing-plugin": {
+      "src": "../../../../node_modules/turing-plugin/lib/index.ts",
+      "file": "turing-plugin.js",
+      "fileHash": "5b280926",
+      "needsInterop": false
+    },
+    "lodash-es": {
+      "src": "../../../../node_modules/lodash-es/lodash.js",
+      "file": "lodash-es.js",
+      "fileHash": "c1836484",
+      "needsInterop": false
+    },
+    "vite-plugin-qiankun/dist/helper": {
+      "src": "../../../../node_modules/vite-plugin-qiankun/dist/helper.js",
+      "file": "vite-plugin-qiankun_dist_helper.js",
+      "fileHash": "2e1ab42c",
+      "needsInterop": true
+    },
+    "vue-router": {
+      "src": "../../../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "4757dfe7",
+      "needsInterop": false
+    },
+    "vue-i18n": {
+      "src": "../../../../node_modules/vue-i18n/dist/vue-i18n.esm-bundler.js",
+      "file": "vue-i18n.js",
+      "fileHash": "df2f55b5",
+      "needsInterop": false
+    },
+    "lodash/isArray": {
+      "src": "../../../../node_modules/lodash/isArray.js",
+      "file": "lodash_isArray.js",
+      "fileHash": "b27fa31f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-VZUEXCBL": {
+      "file": "chunk-VZUEXCBL.js"
+    },
+    "chunk-VTPLKB5L": {
+      "file": "chunk-VTPLKB5L.js"
+    },
+    "chunk-VFYRJR7J": {
+      "file": "chunk-VFYRJR7J.js"
+    },
+    "chunk-RPOMXTZU": {
+      "file": "chunk-RPOMXTZU.js"
+    },
+    "chunk-OP63Y56H": {
+      "file": "chunk-OP63Y56H.js"
+    },
+    "chunk-EWTE5DHJ": {
+      "file": "chunk-EWTE5DHJ.js"
+    }
+  }
+}

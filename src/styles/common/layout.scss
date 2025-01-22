@@ -1,0 +1,131 @@
+/* layout相关的样式 包括头部、左侧菜单栏、面包屑等框架 */
+
+.turing-ui-frame {
+  // layout样式
+  .layout {
+    @include model(100%, 100%);
+    background: url("@/assets/images/layout-bg.png") no-repeat;
+    background-size: 100% 100%;
+    .layout-section {
+      @include calc-height($header-height);
+      padding: 0 $padding-primary;
+      padding-bottom: 8px;
+      @include flex();
+    }
+    .layout-main {
+      height: 100%;
+      border-radius: $border-radius-box;
+      .layout-view {
+        @include calc-height($breadcrumb-height);
+        @include white-bg();
+        border: 1px solid $border-color-split;
+        position: relative;
+        >div {
+          height: 100%;
+        }
+      }
+    }
+  }
+  // 头部组件样式
+  .layout-header {
+    height: $header-height;
+    padding: 0 $padding-primary;
+    @include flexBetween();
+    >div {
+      @include flex();
+    }
+    .tool-bar-right {
+      .icon-pifu {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .label-item {
+        color: #183D5C;
+        @include flex();
+        >label {
+          color: #71899d;
+        }
+      }
+      .logou-wrap {
+        cursor: pointer;
+      }
+    }
+  }
+  // 面包屑组件样式
+  .layout-tab {
+    height: $breadcrumb-height;
+    @include flex();
+    padding: 0 $padding-primary;
+    background: #fff;
+    flex-shrink: 0;
+    .el-breadcrumb__item {
+      .el-breadcrumb__inner {
+        font-weight: normal;
+        color: $text-color-third;
+      }
+      &:last-child {
+        .el-breadcrumb__inner {
+          font-weight: 550;
+          color: $text-color;
+        }
+      }
+    }
+  }
+  // 左侧菜单栏组件样式
+  .layout-sidebar {
+    @include model(auto, 100%);
+    position: relative;
+    margin-right: 12px;
+    background: rgba(255,255,255,0.50);
+    border-radius: $border-radius-box;
+    padding: 0 12px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    .el-menu {
+      width: calc($sidebar-width - 24px);
+      border-right: 0;
+      background: transparent;
+      &.el-menu--collapse {
+        width: 36px;
+        .el-menu-item,
+        .el-sub-menu__title {
+          > span, .el-sub-menu__icon-arrow {
+            display: none;
+          }
+        }
+      }
+      .el-menu-item,
+      .el-sub-menu__title {
+        height: 38px;
+        margin-top: 10px;
+        padding: 0 10px;
+        border-radius: 6px;
+        color: $text-color;
+        &:hover {
+          background-color: transparent;
+          color: $primary-color;
+        }
+        &.is-active {
+          background-color: $primary-color;
+          color: #fff;
+        }
+      }
+      .el-sub-menu {
+        .el-menu-item {
+          padding-left: 28px;
+        }
+      }
+    }
+  }
+}
+
+// 如果某个项目有定制样式，则在下面写
+// .turing-ui-frame {
+//   &.systmeA {
+    
+//   }
+
+//   &.systmeB {
+
+//   }
+// }

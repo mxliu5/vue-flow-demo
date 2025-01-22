@@ -1,0 +1,42 @@
+// 全局scss变量，方便在scss中使用
+
+// 主题色
+$primary-color: var(--el-color-primary);
+$warning-color: var(--el-color-warning);
+$success-color: var(--el-color-success);
+$danger-color: var(--el-color-danger);
+$info-color: var(--el-color-info);
+$primary-bg: #F3F8FF;
+$success-bg: #EFFFFD;
+$warning-bg: #FFF9EC;
+$danger-bg: #FFF3F3;
+$info-bg: #eceef3;
+
+// 字体色
+$title-color: var(--el-text-color-primary);            // 标题色                        // 标题色
+$text-color: var(--el-text-color-primary);             // 文本色
+$text-color-secondary: var(--el-text-color-secondary);   // 次级文本色
+$text-color-third: #81878C;     // 三级文本色
+$disabled-color: var(--el-text-color-disabled);        // 禁用色
+$placeholder-color: var(--el-text-color-placeholder);  // placehodler色                        // 禁用色
+
+// 边框
+$border-color: var(--el-border-color);                // 边框
+$border-color-split: var(--el-border-color-light);    // 分割线
+$border-radius: var(--el-border-radius-base);         // 圆角
+$border-radius-box: 8px;                              // 圆角
+$box-shadow: 0 0 12px #0000000d;                    // 边框阴影
+
+// 背景色
+$body-bg: var(--el-fill-color-lighter);
+$active-bg: var(--el-fill-color-light);       // 下拉框选择的背景颜色
+$head-bg: var(--el-fill-color-light);         // 表头等...背景色
+
+// 字体
+$font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+
+// 间距
+$padding-primary: 16px;
+$header-height: var(--header-height);
+$breadcrumb-height: var(--breadcrumb-height);
+$sidebar-width: var(--sidebar-width);

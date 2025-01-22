@@ -1,0 +1,132 @@
+// 统一加个前缀，防止污染其他组件
+.turing-ui-frame {
+  // layout
+  .el-header,
+  .el-main {
+    padding: 0;
+  }
+  // 表格
+  .el-table {
+    &.el-table--default {
+      .el-table__cell {
+        padding: 12px 0 !important;
+      }
+    }
+    .el-table__header {
+      .el-table__cell {
+        font-weight: 550;
+      }
+    }
+    .el-table__body tr:hover > td {
+      background: #fafafa;
+    }
+  }
+  // 按钮
+  .el-button {
+    &.el-button--primary {
+      &.is-plain:not(:hover) {
+        background-color: #fff;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+    }
+    &+.el-button {
+      margin-left: 12px;
+    }
+  }
+  .el-radio-button {
+    &.is-active {
+      .el-radio-button__inner {
+        background-color: #fff;
+        border-color: $primary-color;
+        color: $primary-color;  
+        font-weight: 550;
+      }
+    }
+  }
+  // select
+  .el-select-dropdown {
+    .el-select-dropdown__item {
+      padding: 0 16px;
+    }
+  }
+  // 下拉选项
+  .el-dropdown{
+    >div {
+      outline: none !important;
+    }
+  }
+  .el-tabs {
+    .el-tabs__header {
+      margin-bottom: 0;
+      .el-tabs__nav-wrap::after {
+        height: 1px;
+      }
+      .custom-tabs-label {
+        .el-icon, >span {
+          vertical-align: middle;
+        }
+        >span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  // 描述组件
+  .el-descriptions {
+    .el-descriptions__body {
+      background: transparent;
+      .el-descriptions__label {
+        background-color: #F8FBFF !important;
+      }
+    }
+  }
+  // 消息提示框[需要将提示框放到#app元素上，默认body上，如果作为qiankun子应用使用，不能进行样式隔离]
+  .el-message {
+    background: #fff;
+    min-width: 300px;
+    .el-message__icon {
+      font-size: 18px;
+    }
+    .el-message__content {
+      color: $text-color;
+    }
+  }
+  .el-message-box {
+    padding-bottom: 0;
+    .el-message-box__btns {
+      padding: 24px 16px;
+      justify-content: center;
+    }
+    .el-message-box__container {
+      position: relative;
+      >.el-icon {
+        // top: 15px;
+      }
+      .custom-message {
+        >h3 {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// el-cascader多选时仅支持选中最后一项
+.only-check-last.el-cascader__dropdown {
+  .el-cascader-menu {
+    &:first-child {
+      .el-cascader-node .el-checkbox {
+        display: none;
+      }
+    }
+    .el-cascader-node .el-checkbox {
+      display: block;
+    }
+  }
+}
+
+// .turing-ui-frame.systemA {
+  
+// }

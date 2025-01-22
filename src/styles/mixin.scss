@@ -1,0 +1,144 @@
+// 单行溢出省略号显示
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 多行溢出省略号显示
+@mixin multi-over($num: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $num;
+}
+
+// 强制换行
+@mixin force-wrap () {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+// 盒子模型
+@mixin model ($w: none, $h: none, $m: none, $p: none, $top: none, $right: none, $bottom: none, $left: none) {
+  @if ($w != none) {
+    width: $w;
+  }
+  @if ($h != none) {
+    height: $h;
+  }
+  @if $m != none {
+    margin: $m;
+  }
+  @if ($p != none) {
+    padding: $p;
+  }
+  @if ($top != none) {
+    top: $top;
+  }
+  @if ($right != none) {
+    right: $right;
+  }
+  @if ($bottom != none) {
+    bottom: $bottom;
+  }
+  @if ($left != none) {
+    left: $left;
+  }
+}
+
+// 弹性布局
+@mixin flex ($direction: flex-start) {
+  // flex
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  // 垂直居中方式
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  // 水平居中方式
+  justify-content: $direction;
+}
+
+@mixin flexBetween ($direction: center) {
+  // flex
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  // 水平居中方式
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  // 垂直居中方式
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  // -webkit-align-items: center;
+  align-items: $direction;
+}
+
+@mixin flexCenter () {
+  // flex
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  // 水平居中方式
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: center;
+  justify-content: center;
+  // 垂直居中方式
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+// 圆角边框
+@mixin border-radius ($value: 5px){
+  -moz-border-radius: $value;
+  -webkit-border-radius: $value;
+  -o-border-radius: $value;
+  border-radius: $value;
+}
+// 边框
+@mixin border ($value: 1px, $color: #E5E5E5){
+  border: $value solid $color;
+}
+@mixin border-right ($value: 1px, $color: #E5E5E5){
+  border-right: $value solid $color;
+}
+
+// 白色背景
+@mixin white-bg (){
+  background: #fff;
+}
+// 暗色背景
+@mixin body-bg (){
+  background: #f0f2f6;
+}
+
+@mixin calc-width ($w){
+  width: calc(100% - $w)
+}
+@mixin calc-height ($h){
+  height: calc(100% - $h)
+}
+
+// query/operation/table/pagination等公共组件的padding值
+@mixin area-padding (){
+  padding: 12px 16px;
+}
+
+@mixin tip-text () {
+  font-size: 12px;
+  font-weight: normal;
+  color: #81878C;
+}
+
+@mixin height-adaptive () {
+  display: flex;
+  flex-direction: column;
+}

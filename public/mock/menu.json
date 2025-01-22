@@ -1,0 +1,20 @@
+{
+    "code": "000000",
+    "desc": "success",
+    "data": [
+        {
+            "url": "/vue-flow",
+            "name": "vue-flow",
+            "icon": "menu5",
+            "sort": 2,
+            "children": [
+                {
+                    "url": "/vue-flow",
+                    "name": "流程画布",
+                    "icon": "",
+                    "sort": 1
+                }
+            ]
+        }
+    ]
+}

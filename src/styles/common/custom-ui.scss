@@ -1,0 +1,85 @@
+/* 自定义组件的样式 */
+.turing-ui-frame {
+  // 上传组件
+  .custom-upload {
+    width: 100%;
+    position: relative;
+    &:not(.is-drag-style) {
+      .el-upload-dragger {
+        padding: 0;
+        overflow: inherit;
+        border-width: 0;
+        display: inline-block;
+      }
+      .down-temp {
+        position: absolute;
+        top: 1px;
+      }
+    } 
+    .el-upload__tip {
+      background: $body-bg;
+      border-radius: 8px;
+      padding: 12px;
+    }
+  }
+  // dialog组件
+  .custom-dialog {
+    @include border-radius(8px);
+    .el-dialog__header {
+      border-bottom: 1px solid $border-color-split;
+      padding: 15px 24px;
+      margin-right: 0;
+      .el-dialog__title {
+        color: $title-color;
+        font-weight: 550;
+      }
+    }
+    .el-dialog__body {
+      @include calc-height(115px);
+      overflow-y: auto;
+    }
+    .el-dialog__footer {
+      padding-top: 0;
+      padding-bottom: 24px;
+      text-align: center;
+    }
+    &.is-fullscreen {
+      border-radius: 0;
+    }
+    &.hide-header {
+      .el-dialog__header {
+        display: none;
+      }
+      .el-dialog__body {
+        @include calc-height(60px);
+      }
+    }
+    &.hide-footer {
+      .el-dialog__footer {
+        display: none;
+      }
+      .el-dialog__body {
+        @include calc-height(60px);
+      }
+    }
+    &.hide-header.hide-footer {
+      .el-dialog__body {
+        height: 100%;
+      }
+    }
+  }
+  // drawer组价
+  .custom-drawer {
+    .el-drawer__header {
+      padding: 20px;
+      margin: 0;
+    }
+    .el-drawer__body {
+      border-top: 1px solid $border-color-split;
+      border-bottom: 1px solid $border-color-split;
+    }
+    .el-drawer__footer {
+      padding: 16px 20px;
+    }
+  }
+}

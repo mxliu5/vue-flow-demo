@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "types": ["element-plus/global"],
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "allowJs": true,  //编译时允许有js
+    "allowSyntheticDefaultImports": true,  //允许引入没有默认导出的模块
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    /** 非相对模块导入的路径映射配置，根据 baseUrl 配置进行路径计算 */
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/utils/i18n.ts", "src/views/flow-manage/logic-flow/registerNode/tsy.js", "src/views/flow-manage/logic-flow/registerNode/start.js"],
+  "exclude": ["node_modules", "dist", "audit"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

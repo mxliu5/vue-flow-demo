@@ -1,0 +1,33 @@
+@import "./common/layout.scss";
+@import "./common/custom-ui.scss";
+.turing-ui-frame {
+  .required {
+    padding: 5px;
+    color: $danger-color;
+    font-size: 14px;
+  }
+  .tip-text {
+    @include tip-text();
+  }
+  .over-hide {
+    @include no-wrap();
+  }
+  .flex {
+    @include flex()
+  }
+  .flexStart {
+    @include flex();
+    align-items: flex-start;
+  }
+  .flexBetween {
+    @include flexBetween()
+  }
+  .flexBetweenStart {
+    @include flexBetween();
+    align-items: flex-start;
+  }
+  // 给父级设置该样式，其中一个子集高度已知，另外一个子集设置高度100%，即可实现高度自适应
+  .height-adaptive {
+    @include height-adaptive()
+  }
+}

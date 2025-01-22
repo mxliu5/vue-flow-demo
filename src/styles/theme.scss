@@ -1,0 +1,106 @@
+/*
+  全局css变量，实现一键换肤
+  如果有多套系统公用一套代码，并且每套系统都有自己的样式风格，
+  那么可以通过给每个系统一个专有的class即可
+  然后将所有的样式、样式变量都放在自己对应的class下面写
+*/
+
+.turing-ui-frame {
+  // 主题色primary
+  --el-color-primary: #177BF8;
+  --el-color-primary-light-3: #3a99fe;
+  --el-color-primary-light-5: #69B4FB;
+  --el-color-primary-light-7: #93CDFC;
+  --el-color-primary-light-8: #BDE3FE;
+  --el-color-primary-light-9: #E8F6FF;
+  --el-color-primary-dark-2: #1B6FE2;
+  // 主题色warning
+  --el-color-warning: #F3960C;
+  --el-color-warning-light-3: #F5AA39;
+  --el-color-warning-light-5: #f3d19e;
+  --el-color-warning-light-7: #f8e3c5;
+  --el-color-warning-light-8: #faecd8;
+  --el-color-warning-light-9: #fdf6ec;
+  --el-color-warning-dark-2: #E48F10;
+  // 主题色 success
+  --el-color-success: #16C0AA;
+  --el-color-success-light-3: #36D0BC;
+  --el-color-success-light-5: #a1e9df;
+  --el-color-success-light-7: #d0f1ee;
+  --el-color-success-light-8: #d8f8f5;
+  --el-color-success-light-9: #f0f9eb;
+  --el-color-success-dark-2: #18B6A2;
+  // 主题色 danger
+  --el-color-danger: #F14D4D;
+  --el-color-danger-light-3: #F76B6B;
+  --el-color-danger-light-5: #f8bdbd;
+  --el-color-danger-light-7: #f4d4d4;
+  --el-color-danger-light-8: #f5e5e5;
+  --el-color-danger-light-9: #FFF3F3;
+  --el-color-danger-dark-2: #E34545;
+  // 主题色 info
+  --el-color-info: #70767c;
+  --el-color-info-light-3: #b1b3b8;
+  --el-color-info-light-5: #c8c9cc;
+  --el-color-info-light-7: #dedfe0;
+  --el-color-info-light-8: #e9e9eb;
+  --el-color-info-light-9: #f4f4f5;
+  --el-color-info-dark-2: #73767a;
+  // 边框
+  --el-border-color: #DCDFE6;
+  --el-border-color-light: #E5EBF0;
+  --el-border-radius-base: 4px;
+  // 字体颜色
+  --el-text-color-primary: #373C40; // 字体主色
+  --el-text-color-regular: #373C40; // 字体常用色
+  --el-text-color-secondary: #656A6E;
+  --el-text-color-placeholder: #a8abb2;
+  --el-text-color-disabled: #a8abb2;
+  // 填充色
+  --el-fill-color: #f0f2f5;
+  --el-fill-color-light: #f5f7fa;
+  --el-fill-color-lighter: #fafafa;
+  // 其他
+  --el-menu-item-height: 40px;
+}
+// 表格默认主题变量修改
+.el-table {
+  --el-table-header-bg-color: var(--el-fill-color-light);
+  --el-table-text-color: var(--el-text-color-primary);
+  --el-table-header-text-color: var(--el-text-color-primary);
+  --el-table-row-hover-bg-color: var(--el-fill-color-light);
+}
+.turing-ui-frame {
+  --header-height: 50px;
+  --breadcrumb-height: 50px;
+  --sidebar-width: 200px;
+}
+
+
+
+/* 如果某个项目有定制样式，则在下面写 */
+.systemA {
+  --el-color-primary: #409eff;
+}
+
+
+/* 配置多套主题色 */
+.green {
+  --el-color-primary: #009688;
+  --el-color-primary-light-3: #4db6ac;
+  --el-color-primary-light-5: #80cbc4;
+  --el-color-primary-light-7: #9ddfd9;
+  --el-color-primary-light-8: #afe9e4;
+  --el-color-primary-light-9: #effcfc;
+  --el-color-primary-dark-2: #066f65;
+}
+
+.gray {
+  --el-color-primary: #70767c;
+  --el-color-primary-light-3: #8d949c;
+  --el-color-primary-light-5: #8e9397;
+  --el-color-primary-light-7: #bec3c7;
+  --el-color-primary-light-8: #cccdcf;
+  --el-color-primary-light-9: #eff3f6;
+  --el-color-primary-dark-2: #6a6d6f;
+}

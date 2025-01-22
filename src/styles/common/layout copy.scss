@@ -1,0 +1,123 @@
+/* layout相关的样式 包括头部、左侧菜单栏、面包屑等框架 */
+
+.turing-ui-frame {
+  // layout样式
+  .layout {
+    @include model(100%, 100%);
+    background-size: 100% 100%;
+    background-color: #f2f3f5;
+    // 头部组件样式
+    .layout-header {
+      height: $header-height;
+      padding: 0 $padding-primary;
+      @include flexBetween();
+      background: #fff;
+      // border-bottom: 1px solid $border-color;
+      >div {
+        @include flex();
+      }
+      .tool-bar-right {
+        .icon-pifu {
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+        .label-item {
+          color: #183D5C;
+          @include flex();
+          >label {
+            color: #71899d;
+          }
+        }
+        .logou-wrap {
+          cursor: pointer;
+        }
+      }
+    }
+    .layout-section {
+      @include calc-height($header-height);
+      @include flex();
+      box-shadow: 0 4px 14px 0 rgba(46, 71, 134, .3);
+    }
+    .layout-main {
+      height: 100%;
+      .layout-view {
+        @include calc-height($breadcrumb-height);
+        @include white-bg();
+        border: 1px solid $border-color-split;
+        position: relative;
+        margin: 0 16px;
+        @include border-radius($border-radius-box);
+        overflow: hidden;
+        >div {
+          height: 100%;
+        }
+      }
+    }
+  }
+  // 面包屑组件样式
+  .layout-tab {
+    height: $breadcrumb-height;
+    @include flex();
+    padding: 0 $padding-primary;
+    // background: #fff;
+    flex-shrink: 0;
+    .el-breadcrumb__item {
+      .el-breadcrumb__inner {
+        font-weight: normal;
+        color: $text-color-third;
+      }
+      &:last-child {
+        .el-breadcrumb__inner {
+          font-weight: 550;
+          color: $text-color;
+        }
+      }
+    }
+  }
+  // 左侧菜单栏组件样式
+  .layout-sidebar {
+    @include model(auto, 100%);
+    position: relative;
+    background: rgba(255,255,255,0.50);
+    // padding: 0 12px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    background-color: #fff;
+    .el-menu {
+      width: $sidebar-width;
+      border-right: 0;
+      background: transparent;
+      &.el-menu--collapse {
+        width: 36px;
+        .el-menu-item,
+        .el-sub-menu__title {
+          > span, .el-sub-menu__icon-arrow {
+            display: none;
+          }
+        }
+      }
+      .el-menu-item,
+      .el-sub-menu__title {
+        height: 40px;
+        margin-top: 10px;
+        padding: 0 10px;
+        color: $text-color;
+        border-left: 4px solid transparent;
+        &:hover {
+          background-color: #eaf0ff;
+          color: $primary-color;
+        }
+        &.is-active {
+          background-color: #eaf0ff;
+          border-color: $primary-color;
+          color: $primary-color;
+        }
+      }
+      .el-sub-menu {
+        .el-menu-item {
+          padding-left: 28px;
+        }
+      }
+    }
+  }
+}
