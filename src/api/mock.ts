@@ -1,5 +1,5 @@
 import { cloneDeep } from 'lodash-es';
-import templateJSON from '@/mock/template'
+import flowJSON from '@/mock/flow'
 import appJSON from '@/mock/app'
 import cityJSON from '@/mock/city'
 
@@ -28,11 +28,11 @@ export function getCityList () {
 }
 
 // 模版；列表
-export function getTemplateList (data: any) {
+export function getFlowList (data: any) {
   // console.log('接口参数为：', data)
   const {page, size} = data
   return new Promise((resolve: any) => {
-    const res = templateJSON
+    const res = flowJSON
     const result = cloneDeep(res.data.content);
     const totalElements = result.length
     const content = result.slice((page - 1)*size, page * size)

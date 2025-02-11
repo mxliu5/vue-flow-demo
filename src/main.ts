@@ -22,11 +22,6 @@ import { initComponent } from '@/components'
 import 'virtual:svg-icons-register'; // 注册svg图标
 import '@/styles/index.scss'         // 引入公共样式文件
 
-/* vue-flow样式 */
-import '@vue-flow/core/dist/style.css';
-import '@vue-flow/core/dist/theme-default.css';
-import '@vue-flow/controls/dist/style.css';
-import '@vue-flow/minimap/dist/style.css';
 
 /* 国际化 */
 import zhCN from "element-plus/es/locale/lang/zh-cn";

@@ -1,0 +1,14 @@
+.my-vue-flow {
+  .vue-flow__handle {  
+    @include model(10px, 10px);
+    background-color: #fff;
+    border: 2px solid var(--el-color-primary-light-3);
+  }
+  .vue-flow__edge {
+    &.animated {
+      > path {
+        stroke: $primary-color;;
+      }
+    }
+  }
+}

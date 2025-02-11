@@ -19,7 +19,14 @@ const routes: Array<RouteRecordRaw> = [
             path: '',
             name: 'vue-flow',
             meta: { label: '流程画布' }, 
-            component: () => import("@/views/vue-flow/index.vue"),
+            component: () => import("@/views/vue-flow/flowList.vue"),
+          },
+          // 一级面包屑
+          {
+            path: 'detail',
+            name: 'vue-flow::detail',
+            meta: { label: '画布详情' }, 
+            component: () => import("@/views/vue-flow/flowDetail.vue"),
           }
         ]
       },

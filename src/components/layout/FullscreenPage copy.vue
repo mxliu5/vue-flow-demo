@@ -1,6 +1,10 @@
 <template>
-  <div
-    class="fullscreen-page">
+  <my-dialog 
+    class="fullscreen-page"
+    v-model="dialogVisible"
+    fullscreen
+    :with-header="false"
+    :with-footer="false">
     <div class="fullscreen-page__header">
       <div class="header-left">
         <span class="header-back" @click="close">
@@ -13,14 +17,16 @@
     <div class="fullscreen-page__container">
       <slot></slot>
     </div>
-  </div>
+  </my-dialog>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 defineProps({
   title: { type: String }
 })
 const emits = defineEmits(['close'])
+const dialogVisible = ref<boolean>(true)
 const close = () => {
   emits('close')
 };
@@ -28,11 +34,6 @@ const close = () => {
 
 <style lang="scss" scoped>
 .fullscreen-page {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   .fullscreen-page__header {
     height: 52px;
     line-height: 52px;
